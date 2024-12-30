@@ -1,0 +1,15 @@
+.form{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 40px 0;
+    font-family: "Roboto Mono", serif;
+}
+.form form{
+    max-height: 90%;
+    max-width: 50%;
+    width: 40%;
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
+    padding: 8px 40px;
+}

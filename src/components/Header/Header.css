@@ -1,0 +1,8 @@
+.header{
+    background: var(--color-background);
+}
+.header img{
+    max-width: 100%;
+    background-size: contain;
+    object-fit: cover;
+}

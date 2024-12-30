@@ -1,0 +1,10 @@
+:root{
+  --color-background: linear-gradient(90deg, rgba(166,225,245,1) 0%, rgba(233,244,132,1) 72%, rgba(244,160,207,1) 100%);
+}
+body {
+  margin: 0;
+  font-family: "Roboto Mono", serif;
+  box-sizing: border-box;
+}
+
+
