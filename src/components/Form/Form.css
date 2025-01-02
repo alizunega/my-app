@@ -1,15 +1,39 @@
-.form{
+.form {
     display: flex;
     justify-content: space-evenly;
-    margin: 40px 0;
+    flex-direction: column;
+    margin: 4.5em 3.125em;
     font-family: "Roboto Mono", serif;
+
+    gap: 1.5em;
+
+
 }
-.form form{
-    max-height: 90%;
-    max-width: 50%;
-    width: 40%;
+
+.form form {
     background-color: #f7f7f7;
     border-radius: 20px;
     box-shadow: 7px 7px 15px rgba(0, 0, 0, 0.08);
-    padding: 8px 40px;
+    padding: .5em 1.5em;
+    flex: 1;
+
+
+}
+
+.form h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 1em;
+    color: #212121;
+}
+
+
+
+@media screen and (min-width: 900px) {
+    .form {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
 }

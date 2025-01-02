@@ -5,7 +5,7 @@ import hexToRgba from "hex-to-rgba";
 const Team = (props) => {
   // la data que recibe team es todo el objeto de cada equipo
   const { titulo, color1, id } = props.data;
-  const { colabs, eliminarColab, changeColor} = props;
+  const { colabs, eliminarColab, changeColor, likeColab} = props;
   //console.log(colabs.length);
   
 
@@ -29,6 +29,7 @@ const Team = (props) => {
               key={colab.id}
               color1={color1}
               eliminarColab={eliminarColab}
+              likeColab={likeColab}
             />
           ))}
         </div>

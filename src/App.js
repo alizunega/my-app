@@ -15,6 +15,7 @@ function App() {
       foto: "https://github.com/alizunega.png",
       nombre: "Alicia",
       puesto: "Desarrolladora",
+      fav: false,
     },
     {
       id: uuid(),
@@ -22,6 +23,7 @@ function App() {
       foto: "https://github.com/alizunega.png",
       nombre: "Lourdes",
       puesto: "Desarrolladora",
+      fav: false,
     },
     {
       id: uuid(),
@@ -29,6 +31,7 @@ function App() {
       foto: "https://github.com/alizunega.png",
       nombre: "Lourdes",
       puesto: "Head Leader",
+      fav: false,
     },
     {
       id: uuid(),
@@ -36,6 +39,7 @@ function App() {
       foto: "https://github.com/alizunega.png",
       nombre: "Alicia",
       puesto: "Desarrolladora",
+      fav: false,
     },
   ]);
 
@@ -86,7 +90,6 @@ function App() {
     },
   ]);
 
-
   // console.log(uuid());
 
   //manejo de cambio de estado de la funcionalidad de mostrar o no el formulario
@@ -123,9 +126,20 @@ function App() {
     updateEquipos(newEquipos);
   };
 
-  const crearEquipo = (nuevoEquipo) =>{
-    updateEquipos([...equipos ,nuevoEquipo]);
-  }
+  const crearEquipo = (nuevoEquipo) => {
+    updateEquipos([...equipos, nuevoEquipo]);
+  };
+
+  const likeColab = (id) => {
+    // console.log("Colaborador favorito", id);
+    const colabsFav = colabs.map((colab) => {
+      if (colab.id === id) {
+        colab.fav = !colab.fav;
+      }
+      return colab;
+    });
+    updateColabs(colabsFav);
+  };
 
   return (
     <div>
@@ -135,7 +149,6 @@ function App() {
           data={equipos.map((equipo) => equipo.titulo)}
           registrarColab={registrarColab}
           crearEquipo={crearEquipo}
-
         />
       )}
 
@@ -148,6 +161,7 @@ function App() {
           colabs={colabs.filter((colab) => colab.equipo === equipo.titulo)}
           eliminarColab={eliminarColab}
           changeColor={changeColor}
+          likeColab={likeColab}
         />
       ))}
 

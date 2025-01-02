@@ -67,18 +67,21 @@ const Form = (props) => {
           placeholder="Ingresar nombre"
           value={nombre}
           setValue={setNombre}
+
         />
         <CampoTexto
           title="Puesto"
           placeholder="Ingresar puesto"
           value={puesto}
           setValue={setPuesto}
+
         />
         <CampoTexto
           title="Foto"
           placeholder="Ingresar url de la foto"
           value={foto}
           setValue={setFoto}
+
         />
         {/* a la lista le debo mandar el contenido de data solo el titulo de los equipos */}
         <ListaOpciones
@@ -95,14 +98,18 @@ const Form = (props) => {
           placeholder="Ingresar titulo del equipo"
           value={titulo}
           setValue={setTitulo}
+
         />
         <CampoTexto
+          className="campo-color"
           title="Color Primario"
           placeholder="Ingresa color en hexa"
           value={color1}
           setValue={setColor}
+          type="color"
         />
         <Button title="Registrar equipo" />
+
       </form>
     </section>
   );

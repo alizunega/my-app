@@ -1,5 +1,15 @@
-.campo-texto{
+.campo-text{
     margin: 24px 0;
     font-family: "Roboto Mono", serif;
+}
+.campo-text input{
+    height: 3em;
+    padding: .4em 1.25em;
+}
+
+.campo-color input {
+    height: 3em;
+    padding: .4em 1.25em;
+    width: 8em;
 }
 

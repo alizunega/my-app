@@ -6,3 +6,13 @@
     background-size: contain;
     object-fit: cover;
 }
+.title {
+    position: absolute; /* Posiciona el título de manera absoluta */
+    font-size: 2rem;
+    font-weight: 700;
+    color: #a155f8;
+    text-align: left;
+    top: 20px; /* Ajusta según sea necesario */
+    left: 5em; /* Ajusta según sea necesario */
+
+}
